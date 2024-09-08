@@ -6,16 +6,15 @@ public:
         bool neg_x=false;
         if(x<0) {
             neg_x=true;
-            if(x>-2147483648)
-            {
+            if(x>INT_MIN) {
                 x*=-1;
             }
         }
         bool ch=false;
         while(x>0) {   
-            if(ans>=2147483648/10)
+            if(ans>=INT_MAX/10)
             {
-                if(ans==2147483648/10 && x<2147483648%10 && x>=0)
+                if(ans==INT_MAX/10 && x<INT_MAX%10 && x>=0)
                 {
                     ans=ans*10;
                     ans+=(x%10);
