@@ -1,8 +1,7 @@
 class Solution {
 public:
     int reverse(int x) {
-        int ans=0;
-        //cout<<2147483648/10<<endl;
+        int ans=0;        
         bool neg_x=false;
         if(x<0) {
             neg_x=true;
