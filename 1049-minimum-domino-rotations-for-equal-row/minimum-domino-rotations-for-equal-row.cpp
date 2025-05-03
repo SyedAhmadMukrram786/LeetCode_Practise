@@ -32,8 +32,6 @@ public:
             return 0;
         if((t_max + Bfreq[t_max_num]) >= tops.size())
         {
-            cout<<t_max_num<<endl;
-            cout<<"Top"<<endl;
             for(int i=0;i<tops.size();i++)
             {
                 if(t_max_num!=tops[i])
@@ -46,15 +44,9 @@ public:
                     swap(tempBottoms[i],tops[i]);
                 }
             }
-            cout<<"Top ans is: "<<ans<<endl;
         }
-        cout<<b_max + Tfreq[b_max_num]<<endl;
-        cout<<t_max_num<<endl;
-        cout<<b_max_num<<endl;
         if(b_max + Tfreq[b_max_num] >= tops.size())
         {
-            cout<<b_max_num<<endl;
-            cout<<"Bottoms"<<endl;
             for(int i=0;i<bottoms.size();i++) {
                 if(b_max_num!=bottoms[i]) {
                     if(b_max_num!=tops[i]) {
@@ -65,7 +57,6 @@ public:
                     swap(bottoms[i],tempTops[i]);
                 }
             }
-            cout<<"Bottom ans is: "<<ans1<<endl;
         }
         return (ans > 0 && ans1 > 0)? min(ans , ans1) : (ans > 0)? ans : (ans1 > 0)? ans1 : -1;
     }
